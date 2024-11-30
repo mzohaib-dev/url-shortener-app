@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+/* Box sizing reset */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* Margin and padding reset */
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, img, ul, ol, li, form, input, button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-family: 'Poppins', sans-serif;
+  vertical-align: baseline;
+}
+
+/* Typography reset */
+body {
+  line-height: 1;
+  width: 100%;
+}
+
+/* List reset */
+ul, ol {
+  list-style: none;
+}
+
+/* Link reset */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Form element reset */
+button, input, select, textarea {
+  font-size: 100%;
+  vertical-align: middle;
+}
+
+:root {
+  --main-color: #8F8AEF;
+  --accent-color: #7e78d9;
+  --text-color: #333333;
+  min-width: 500px;
+}
+
+html, body {
+  width: 100%;  
+}
+
+body {
+  padding-top: 6em;
+  padding-bottom: 6em;
+  color: var(--text-color);
+}
+
+.shadow-effect {
+  width: 20em;
+  background-color: transparent;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  box-shadow: 10em 10em 8em rgba(143, 138, 239, 0.5);
+  position: absolute;
+  top: -20em;
+  left: -20em;
+  z-index: 3;
+}
+
+/***************************
+  HEADER
+***************************/
+
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 2em;
+  z-index: 2;
+  background-color: #fff;
+}
+
+.logo {
+  font-weight: 800;
+  font-size: 1.5rem;
+  z-index: 5;
+}
+
+.login {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.login ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 2em;
+}
+
+.login ul li {
+  cursor: pointer;
+  transition: font-weight 0.15s;
+}
+
+.login ul li:hover {
+  font-weight: 500;
+}
+
+.signup-btn {
+  margin-left: 2em;
+  padding: 0.5em 1.5em;
+  background-color: var(--main-color);
+  color: #fff;
+  border-radius: 0.5em;
+  cursor: pointer;
+  transition: background-color 0.15s, font-weight 0.15s;
+}
+
+.signup-btn:hover {
+  background-color: var(--accent-color);
+  font-weight: 500;
+}
+
+/***************************
+  MAIN
+***************************/
+
+main {
+  margin-top: 6em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  margin-bottom: 2em;
+  width: 100%;
+}
+
+main h1 {
+  color: var(--accent-color);
+  font-weight: 900;
+  text-align: center;
+  font-size: 2rem;
+}
+
+main p {
+  text-align: center;
+  font-size: 0.9rem;
+  max-width: 700px;
+  line-height: 1.5em;
+  width: 80%;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0em 0em 1em rgba(0,0,0,0.4);
+  padding: 1em 2em;
+  margin-top: 2em;
+  margin-left: 5em;
+  margin-right: 5em;
+  width: 100%;
+}
+
+.input-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input-container input {
+  padding: 1em 4em;
+  background-color: #F6F5FC;
+  width: 100%;
+}
+
+.input-container img {
+  width: 1em;
+  filter: hue-rotate(90deg);
+}
+
+.input-container button {
+  background-image: linear-gradient(to right, var(--main-color), var(--accent-color));
+  color: #fff;
+  padding: 0.5em 1.5em;
+  border-radius: 0.5em;
+  box-shadow: 0.25em 0.25em 0.5em rgba(0,0,0,0.4);
+  cursor: pointer;
+  transition: background-color 0.15s, font-weight 0.15s;
+}
+
+.input-container button:hover {
+  background-color: var(--accent-color);
+  font-weight: 500;
+}
+
+.more {
+  margin-top: 1em;
+  font-weight: 400;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.result-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2em;
+}
+
+.result span {
+  color: var(--main-color);
+  font-weight: 800;
+}
+
+.toggleMenu {
+  visibility: hidden;
+}
+
+.toggleModal {
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+}
+
+.toggleModal.active {
+  visibility: visible;
+}
+
+.toggleModal ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+
+.toggleModal ul li {
+  font-size: 1.75rem;
+  cursor: pointer;
+}
+
+.toggleModal ul li:hover {
+  color: var(--main-color);
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 480px) {
+  .input-container {
+    flex-direction: column;
+  }
+  .login {
+    visibility: hidden;
+  }
+  .toggleMenu {
+    visibility: visible;
+    background: url(https://i.ibb.co/rvvvqvt/menu.png);
+    z-index: 20;
+    filter: invert(53%) sepia(53%) saturate(523%) hue-rotate(204deg) brightness(99%) contrast(90%);
+    width: 2em;
+    height: 2em;
+    cursor: pointer;
+    position: absolute;
+    right: 1em;
+    transition: opacity 0.15s;
+    background-position: center;
+  }
+  .toggleMenu:hover {
+    opacity: 0.8;
+  }
+  .toggleMenu.active {
+    background: url(https://i.ibb.co/vBDp7wJ/close.png);
+    visibility: visible;
+    z-index: 20;
+    filter: invert(53%) sepia(53%) saturate(523%) hue-rotate(204deg) brightness(99%) contrast(90%);
+    width: 1.5em;
+    height: 1.5em;
+    background-position: center;
+    cursor: pointer;
+    position: absolute;
+    right: 1em;
+    transition: opacity 0.15s;
+  }
+  body {
+    width: 100vw;
+  }
+}
